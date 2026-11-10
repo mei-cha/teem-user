@@ -11,11 +11,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <DocsLayout
       tree={source.getPageTree()}
       {...base}
-      nav={{ 
-        ...base.nav, 
+      nav={{
+        ...base.nav,
         enabled: true,
       }}
-      // Hilangkan tombol bawaan sidebar agar tidak duplikat dengan DocsHeader
+      // Search dan theme toggle bawaan dimatikan karena sudah ada di DocsHeader
       searchToggle={{ enabled: false }}
       themeSwitch={{ enabled: false }}
       slots={{ header: DocsHeader }}
@@ -24,14 +24,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       }}
       containerProps={{
         style: {
+          // Sidebar setinggi layar penuh, header hanya di atas area konten + TOC
           gridTemplate:
-            '"header header header header header"\n' +
+            '"sidebar sidebar header header header"\n' +
             '"sidebar sidebar toc-popover toc toc"\n' +
             '"sidebar sidebar main toc toc" 1fr / ' +
             'minmax(min-content, 1fr) var(--fd-sidebar-col) ' +
             'minmax(0, calc(var(--fd-layout-width,97rem) - var(--fd-sidebar-width) - var(--fd-toc-width))) ' +
             'var(--fd-toc-width) minmax(min-content, 1fr)',
-          '--fd-docs-row-1': 'var(--fd-header-height)',
+          // Sidebar tidak lagi turun ke bawah header
+          '--fd-docs-row-1': '0px',
           '--fd-header-height': '3.5rem',
         } as CSSProperties,
       }}

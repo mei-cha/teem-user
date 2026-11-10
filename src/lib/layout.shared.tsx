@@ -5,24 +5,34 @@ export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
       title: (
-        <div className="flex items-center gap-2 font-bold">
+        <div className="flex items-center gap-2">
           <Image
             src="/image/logo.webp"
-            alt="teem.id"
-            width={88}
-            height={25}
-            className="h-6 w-auto object-contain rounded dark:hidden"
+            alt="Teem.id"
+            width={128}
+            height={32}
+            className="h-8 w-auto object-contain dark:hidden"
           />
           <Image
             src="/image/logo1.webp"
-            alt="teem.id dark"
-            width={88}
-            height={25}
-            className="hidden h-6 w-auto object-contain rounded dark:block"
+            alt="Teem.id"
+            width={128}
+            height={32}
+            className="hidden h-8 w-auto object-contain dark:block"
           />
         </div>
       ),
+      url: '/docs',
     },
-    // Menambahkan link di Top Navbar atas
+
+    searchToggle: {
+      enabled: true,
+    },
+
+    themeSwitch: {
+      enabled: true,
+    },
+
+    i18n: false,
   };
 }
