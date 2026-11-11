@@ -4,7 +4,7 @@ import {
   DocsDescription,
   DocsPage,
   DocsTitle,
-} from 'fumadocs-ui/layouts/docs/page';
+} from 'fumadocs-ui/layouts/notebook/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
@@ -43,7 +43,7 @@ export async function generateStaticParams() {
   return source.generateParams();
 }
 
-// FUNGSI INI YANG DIGANTI UNTUK MENGUNCI TITLE TAB BROWSER
+// Mengunci title tab browser
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Dokumentasi teem.id',
