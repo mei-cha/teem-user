@@ -1,7 +1,9 @@
 "use client";
 
 import type { ComponentProps } from 'react';
+import Link from 'next/link';
 import { cn } from '@/lib/cn';
+import { baseOptions } from '@/lib/layout.shared';
 import { buttonVariants } from 'fumadocs-ui/components/ui/button';
 import { useDocsLayout } from 'fumadocs-ui/layouts/docs';
 import { LinkItem, type LinkItemType } from 'fumadocs-ui/layouts/shared';
@@ -25,6 +27,8 @@ function SidebarToggle() {
       }
       className={cn(
         buttonVariants({ variant: 'ghost', size: 'icon-sm', className: 'p-2' }),
+        // Hanya tampil di HP (sidebar drawer). Di desktop tombol ada di sidebar.
+        'md:hidden',
       )}
     >
       <SidebarIcon />
@@ -34,6 +38,7 @@ function SidebarToggle() {
 
 export function DocsHeader(props: ComponentProps<'header'>) {
   const { navItems } = useDocsLayout();
+  const base = baseOptions();
 
   const links = navItems.filter(
     (item): item is Extract<LinkItemType, { url: string }> =>
@@ -49,8 +54,11 @@ export function DocsHeader(props: ComponentProps<'header'>) {
         props.className,
       )}
     >
+      {/* Kiri: logo (HP saja) + link navigasi (desktop besar) */}
       <div className="flex flex-1 items-center gap-1">
-        <SidebarToggle />
+        <Link href="/docs" className="flex items-center md:hidden">
+          {base.nav?.title as React.ReactNode}
+        </Link>
         <ul className="hidden flex-row items-center gap-1 lg:flex">
           {links.map((item, i) => (
             <LinkItem
@@ -67,9 +75,11 @@ export function DocsHeader(props: ComponentProps<'header'>) {
         className="absolute inset-x-0 top-1/2 mx-auto hidden w-full max-w-64 -translate-y-1/2 rounded-full ps-2.5 lg:inline-flex"
       />
 
+      {/* Kanan: search + tombol sidebar (HP), toggle tema (desktop saja) */}
       <div className="flex flex-1 items-center justify-end gap-1.5">
         <SearchTrigger hideIfDisabled className="p-2 lg:hidden" />
-        <ThemeSwitch className="px-2.5" />
+        <SidebarToggle />
+        <ThemeSwitch className="px-2.5 max-md:hidden" />
       </div>
     </header>
   );
