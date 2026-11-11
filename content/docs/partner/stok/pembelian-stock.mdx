@@ -1,0 +1,91 @@
+---
+title: Pembelian Stok (Restock)
+icon: ShoppingBag
+---
+
+Halaman **Pembelian Stok** (*Restock*) memungkinkan Mitra untuk melakukan pengisian ulang inventaris toko secara mandiri. Melalui antarmuka ini, Mitra dapat memesan berbagai varian produk yang tersedia di katalog pusat dengan pilihan kemasan grosir, alur yang terintegrasi, serta fitur khusus kebutuhan *B2B Restock*.
+
+---
+
+## Antarmuka Katalog Pembelian Stok
+
+Pada antarmuka ini, Mitra dapat melihat daftar katalog produk yang terbagi berdasarkan kategori. Setiap produk menampilkan total sisa stok yang tersedia di pusat serta variasi opsi satuan pembelian.
+
+![Tampilan Katalog Pembelian Stok](/image/restock.png)
+
+### 1. Multi-Satuan Kemasan Grosir
+Untuk mempermudah pembelian jumlah besar, setiap produk dilengkapi dengan pilihan variasi kemasan berjenjang beserta harga khusus grosir:
+* **Slop**: Satuan tingkat dasar per bungkus slop.
+* **Bal (x20 Slop)**: Satuan tingkat menengah berisi 20 slop per bal.
+* **Karton (x80 Slop)**: Satuan kemasan terbesar berisi 80 slop per karton (atau sesuai spesifikasi produk).
+
+Mitra dapat menentukan jumlah barang secara fleksibel dengan menekan tombol penambah/pengurang (`+` / `-`) pada masing-masing tingkat satuan kemasan.
+
+### 2. Fitur Pencarian & Filter Produk
+Mitra dapat memanfaatkan kolom pencarian serbaguna (*search bar*) untuk menemukan produk dengan cepat berdasarkan:
+* **Nama Produk** (contoh: *Tani Madjoe*, *Assikha Habbats*, *Nate Tani Madjoe*).
+* **Kode SKU** produk.
+* **Satuan** kemasan.
+
+---
+
+## Template Pembelian Awal (Preset Package)
+
+Sistem menyediakan fitur **Template Pembelian Awal** yang secara otomatis mengisi rekomendasi varian produk dan kuantitas minimal pesanan ke dalam ringkasan belanja.
+
+* **Penyesuaian Level Mitra**: Komposisi produk serta kuantitas standar pada template ini disesuaikan dengan jenjang atau tingkatan kemitraan Anda, yaitu **Sub Agen**, **Agen**, maupun **Distributor**.
+* **Fitur Pembatalan Template**: Jika Mitra ingin menentukan pilihan produk secara manual dari awal, Mitra dapat menekan tombol **[Batalkan Pembelian Awal]** di pojok kanan atas ringkasan belanja untuk mengosongkan keranjang.
+
+![Tampilan Template Pembelian Awal](/image/restock-tamplate.png)
+
+---
+
+## Ringkasan Pembelian & Alur Checkout
+
+Di panel sebelah kanan, sistem akan menampilkan panel **Ringkasan Pembelian** secara *real-time* yang mencakup:
+* Jumlah **Produk Dipilih**.
+* **Total Barang** yang dipesan.
+* Akumulasi **Total Harga**.
+
+### Langkah Menyelesaikan Pesanan:
+
+1. Setelah penentuan kuantitas atau penggunaan template pembelian selesai, tekan tombol **[Beli]**.
+2. Anda akan diarahkan ke **Halaman Checkout** yang mengusung alur pemesanan intuitif standar konsumen.
+3. Tinjau kembali rincian daftar barang dan harga grosir yang dipesan.
+4. Tentukan alamat tujuan pengiriman lokasi toko/gudang Mitra serta pilih **Metode Pembayaran** resmi yang tersedia.
+5. Selesaikan pembayaran sesuai invoice agar pesanan segera diproses oleh pihak pusat/distributor.
+
+![Halaman Checkout Rincian Produk](/image/checkout-1.png)
+![Halaman Checkout Pengiriman & Pembayaran](/image/checkout-2.png)
+
+---
+
+## Opsi Metode Pembayaran Khusus
+
+Sistem menyediakan beberapa jalur opsi pembayaran pada halaman checkout:
+
+### 1. Payment Gateway Otomatis (Semua Level Mitra)
+Tersedia bagi seluruh level kemitraan (Sub-Agen, Agen, dan Distributor) mencakup **Virtual Account**, **E-Wallet**, dan **QRIS** (All Bank & E-Wallet). Transaksi melalui jalur ini akan terverifikasi secara otomatis oleh sistem.
+
+### 2. Transfer ke Rekening Perusahaan (Khusus Mitra Distributor)
+Metode pembayaran **Transfer ke Rekening Perusahaan** secara langsung (tanpa melalui *payment gateway*) **hanya tersedia dan tampil khusus untuk akun dengan level Mitra Distributor**. 
+
+![Opsi Transfer ke Rekening Perusahaan Checkout](/image/checkout-tf-bank.png)
+
+* **Informasi Rekening**: Sistem menampilkan detail Bank Tujuan (contoh: *Bank Central Asia / BCA*), Nomor Rekening, serta Atas Nama resmi perusahaan (*Javarata*).
+* **Alur Verifikasi Manual**:
+  1. Setelah membuat pesanan, status transaksi awal akan menjadi **Pending**.
+  2. Distributor melakukan transfer nominal sesuai total tagihan invoice dan menyimpan bukti transfernya.
+  3. Konfirmasi pembayaran dilakukan secara langsung oleh **Admin Perusahaan** (bukan otomatis dari payment gateway) setelah dana masuk diperiksa di rekening resmi perusahaan.
+
+---
+
+## Ringkasan Alur Kerja Restock Stok
+
+| Tahapan | Deskripsi Akses & Tindakan | Dampak pada Sistem |
+| :--- | :--- | :--- |
+| **1. Pilih Kemasan** | Tentukan kuantitas per **Slop**, **Bal**, atau **Karton** | Kuantitas dan total harga langsung terakumulasi |
+| **2. Opsi Template** | Gunakan preset sesuai level (**Sub Agen / Agen / Distributor**) | Mengisi keranjang sesuai kuantitas standar tingkat kemitraan |
+| **3. Klik Beli** | Menekan tombol **[Beli]** pada panel ringkasan | Mengarahkan ke halaman ringkasan checkout |
+| **4. Pilih Pembayaran** | *Payment Gateway* (semua level) atau *Transfer Rekening Perusahaan* (khusus Distributor) | Menentukan alur verifikasi (Otomatis vs Konfirmasi Admin Perusahaan) |
+| **5. Checkout & Bayar** | Pilih metode pengiriman dan lunasi pembayaran invoice | Pesanan diteruskan ke pusat & stok akan bertambah setelah diterima |

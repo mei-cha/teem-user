@@ -1,0 +1,65 @@
+---
+title: Pembatalan Pesanan
+icon: CircleX
+---
+
+Halaman **Pengajuan Pembatalan** berfungsi sebagai pusat kendali bagi Mitra untuk meninjau, menyetujui, atau menolak permohonan pembatalan transaksi yang diajukan oleh pembeli saat pesanan sedang berada dalam tahap pemrosesan.
+
+---
+
+## Alur & Persyaratan Pengajuan Pembatalan
+
+Pembatalan pesanan tidak terjadi secara otomatis apabila transaksi sudah masuk ke tahap **Diproses**. Pada tahap ini, Mitra telah melakukan alokasi stok maupun penyiapan barang, sehingga setiap permohonan dari pembeli membutuhkan konfirmasi dan persetujuan (*approval*) langsung dari pihak Mitra.
+
+ Selama Mitra belum mengambil tindakan (*Approve* atau *Reject*), status pesanan pembeli akan tertahan pada opsi **Menunggu Konfirmasi Pembatalan Mitra**.
+
+![Tampilan Daftar Pengajuan Pembatalan](/image/cancel-approval.png)
+
+---
+
+## Tahapan Penanganan Pembatalan oleh Mitra
+
+### 1. Meninjau Detail & Alasan Pembatalan
+Sebelum memutuskan untuk menerima atau menolak permohonan pembatalan, Mitra sangat disarankan untuk memeriksa latar belakang pengajuan terlebih dahulu.
+
+* Klik tombol **[Detail]** pada baris transaksi pengajuan pembatalan yang ingin ditinjau.
+* Jendela *pop-up* akan menampilkan informasi lengkap mencakup **Nomor Invoice**, **Nama Pembeli**, **Rincian Produk**, serta **Alasan Pembatalan** yang dimasukkan oleh pembeli (misalnya: *Salah memilih varian produk*, *Ingin mengubah alamat pengiriman*, atau *Lupa mengaplikasikan voucher*).
+
+![Detail Alasan Pengajuan Pembatalan](/image/cancel-detail.png)
+
+---
+
+### 2. Memproses Keputusan Pembatalan
+
+Mitra memiliki 2 opsi tindakan terhadap permohonan yang masuk:
+
+#### A. Menyetujui Pembatalan (Approve Cancel)
+Jika Mitra menyetujui pengajuan pembatalan (misalnya karena paket memang belum dikemas atau stok mendadak kosong):
+
+1. Klik tombol **[Setujui Pembatalan]**.
+2. Jendela konfirmasi akan muncul untuk memastikan tindakan Anda.
+3. Setelah dikonfirmasi, sistem akan secara otomatis mengubah status transaksi menjadi **Dibatalkan**.
+4. **Sistem Pengembalian Dana (Refund):** Seluruh dana pembayaran transaksi milik pembeli akan **dikembalikan secara otomatis (*auto-refund*)** ke Saldo Aplikasi/E-Wallet pembeli tanpa memotong saldo aktif Mitra.
+
+![Konfirmasi Persetujuan Pembatalan](/image/cancel-acc.png)
+
+---
+
+#### B. Menolak Pembatalan (Reject Cancel)
+Jika Mitra menolak pengajuan pembatalan (misalnya karena paket sudah selesai dikemas rapi, sudah ditempeli resi pengiriman, atau siap diserahkan ke kurir):
+
+1. Klik tombol **[Tolak Pembatalan]**.
+2. Masukkan **Alasan Penolakan** secara jelas pada kolom yang disediakan agar pembeli memahami kendala operasional Mitra.
+3. Klik **[Kirim Penolakan]**.
+4. Status pengajuan pembatalan akan ditutup, dan status transaksi akan **kembali berlanjut ke alur awal** (tetap berstatus *Diproses* untuk siap dikirim/diambil).
+
+![Form Penolakan Pembatalan](/image/cancel-reject.png)
+
+---
+
+## Ringkasan Matriks Keputusan Pembatalan
+
+| Opsi Tindakan | Alasan Pemilihan | Dampak Status Pesanan | Dampak Keuangan (*Refund*) |
+| :--- | :--- | :--- | :--- |
+| **Menyetujui (Acc)** | Barang belum dikemas / Stok kosong | Pesanan resmi **Dibatalkan** | Dana otomatis dikembalikan (*auto-refund*) ke pembeli |
+| **Menolak (Reject)** | Paket sudah dikemas / Siap dikirim | Kembali ke status awal (**Diproses**) | Dana tetap ditahan sistem untuk diteruskan ke Mitra saat selesai | 

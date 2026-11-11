@@ -1,0 +1,65 @@
+---
+title: Penjualan Offline
+icon: Store
+---
+
+Halaman **Penjualan Offline** digunakan untuk mencatat seluruh transaksi penjualan langsung (secara fisik/di luar toko online) secara cepat dan praktis. 
+
+> **Penting untuk Diperhatikan:**  
+> Sistem penjualan offline ini bersifat **permanen** (hanya mendukung pencatatan data). Transaksi yang telah disimpan **tidak dapat diubah (edit) maupun dihapus**. Pastikan data transaksi yang Anda masukkan sudah benar-benar sesuai sebelum mengonfirmasi transaksi.
+
+> **Catatan Ketersediaan Produk:**  
+> Daftar produk pada halaman Penjualan Offline mengambil data dari **data stok** milik Anda, bukan dari katalog pembelian stok. Misalnya, jika **Produk A** dihapus atau dinonaktifkan oleh admin, Produk A akan **hilang dari halaman Pembelian Stok** (tidak dapat dibeli lagi), tetapi **tetap tersedia di halaman Stok dan Penjualan Offline** selama masih ada stok yang tercatat.
+
+---
+
+## 1. Langkah-Langkah Pencatatan Penjualan Offline
+
+Untuk mencatat transaksi penjualan fisik baru, ikuti tahapan berikut:
+
+1. **Pilih Produk**: Tentukan produk beserta variasi dan jumlah (*quantity*) yang dibeli oleh pelanggan pada katalog pencatatan.
+2. **Input Data Pelanggan (Opsional)**: Anda dapat mengisi data berikut pada kolom yang tersedia. **Seluruh kolom bersifat opsional**, boleh dikosongkan:
+   * **Nama Pelanggan**
+   * **Nomor Telepon**
+   * **Alamat**
+   * **Tujuan**
+   {/* TODO: konfirmasi arti "Tujuan" pada form (tujuan pembelian / tujuan pengiriman / lainnya) */}
+3. **Update Stok & Simpan**: Klik tombol **[Update Stok]** untuk memproses pengurangan stok otomatis dan menyimpan catatan transaksi.
+
+![Form Pencatatan Penjualan Offline](/image/offline.png)
+
+4. **Konfirmasi & Berhasil**: Setelah transaksi disimpan, akan muncul *pop-up* **Penjualan Terkatat** yang menandakan transaksi berhasil. Pada jendela ini tersedia dua opsi:
+   * **[Selesai]**: Menutup jendela konfirmasi dan kembali ke menu awal.
+   * **[Cetak Struk]**: Mencetak bukti transaksi langsung.
+
+![Notifikasi Penjualan Terkatat](/image/offline-noted.png)
+
+---
+
+## 2. Riwayat Penjualan Offline
+
+Anda dapat mengakses dan meninjau seluruh catatan transaksi terdahulu dengan menekan tombol **[Riwayat Penjualan]** yang berada di sudut kanan atas halaman.
+
+### Fitur Ringkasan & Statistik Riwayat
+Pada bagian atas halaman riwayat, sistem menyajikan indikator performa transaksi offline mencakup:
+* **Total Transaksi**: Jumlah keseluruhan transaksi yang telah dilakukan.
+* **Omzet**: Total akumulasi pendapatan dari pencatatan offline.
+* **Rata-Rata Nominal Transaksi**: Estimasi rata-rata nilai belanja per transaksi.
+* **Produk Terjual per Slop**: Total kuantitas unit produk yang berhasil dijual.
+
+![Tampilan Riwayat Penjualan Offline](/image/offline-history.png)
+{/* TODO: pastikan sc riwayat sudah memakai tampilan terbaru (termasuk data telepon/alamat/tujuan jika tampil) */}
+
+---
+
+### Fitur Pencarian, Filter, Export & Cetak Ulang Struk
+
+* **Pencarian Data**: Cari transaksi secara presisi melalui kolom pencarian menggunakan **Nomor Transaksi**, **Nama Pelanggan**, atau **Nama Produk**.
+* **Filter Transaksi**: Saring tampilan riwayat berdasarkan **Rentang Tanggal** tertentu maupun **Nilai Nominal Transaksi**.
+* **Export Excel**: Tekan tombol **[Export]** di sudut kanan atas untuk mengunduh rekap riwayat penjualan offline dalam format file Excel (`.xlsx`).
+
+![Filter Riwayat Penjualan Offline](/image/offline-filter.png)
+
+* **Cetak Ulang Struk**: Apabila Anda membutuhkan struk fisik kembali dari transaksi terdahulu, klik tombol **[Detail Transaksi]** pada baris data yang dipilih, lalu klik tombol pencetakan struk.
+
+![Detail Transaksi dan Cetak Ulang Struk](/image/offline-detail.png)

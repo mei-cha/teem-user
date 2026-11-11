@@ -1,0 +1,58 @@
+---
+title: Penjualan Diambil Sendiri
+icon: Store
+---
+
+Halaman **Penjualan Diambil Sendiri** menyajikan panduan alur pemrosesan pesanan bagi Mitra ketika pembeli memilih opsi *self-pickup* (mengambil pesanan secara langsung ke toko/lokasi mitra).
+
+---
+
+## Alur Pemrosesan Pesanan Ambil Sendiri
+
+### 1. Pesanan Masuk (Menunggu Persetujuan Mitra)
+Saat pesanan baru masuk, Mitra dapat memilih untuk **Menerima** atau **Menolak** pesanan tersebut.
+
+* **Menerima Pesanan**: Klik tombol **[Terima Pesanan]** untuk melanjutkan pesanan ke tahap penyiapan produk.  
+  > **Catatan Saldo:** Saat Anda menerima pesanan, nominal pembayaran transaksi akan secara otomatis dicatat dan menambah **Saldo Pending** akun Mitra Anda.
+* **Menolak Pesanan**: Berbeda dengan metode pengiriman kurir, jika pesanan *diambil sendiri* ditolak oleh Mitra, status transaksi akan **langsung Ditolak (Batal)** dan **TIDAK dilempar ke mitra lain**. Hal ini dikarenakan pembeli sejak awal telah memilih lokasi mitra spesifik yang dituju.
+
+![Status Menunggu Persetujuan Mitra](/image/sell-wait-ambil.png)
+![Tampilan Pesanan Ditolak](/image/sell-reject-ambil.png)
+
+---
+
+### 2. Memproses dan Mengemas Pesanan
+Setelah pesanan diterima, status akan berubah menjadi **Diproses**. Pada tahap ini, Mitra diharapkan untuk segera menyiapkan dan mengemas produk agar siap diambil oleh pembeli.
+
+![Status Pesanan Diproses](/image/sell-proses-ambil.png)
+
+---
+
+### 3. Pesanan Siap Diambil
+Apabila produk sudah selesai dikemas dan siap di lokasi, tekan tombol **[Siap Diambil]**. Status pesanan akan diperbarui menjadi **Siap Diambil**. 
+
+Pada tahap ini, Mitra hanya perlu menunggu pembeli datang ke toko untuk mengambil pesanan mereka. Nominal dana masih tertahan di *Saldo Pending*.
+
+![Status Pesanan Siap Diambil](/image/sell-ready-ambil.png)
+
+---
+
+### 4. Pesanan Selesai
+Setelah pembeli datang mengambil produk dan mengonfirmasi penerimaan barang dengan menekan tombol **[Selesai]** pada aplikasi mereka, status transaksi secara otomatis berubah menjadi **Selesai**.
+
+> **Konversi Saldo Otomatis:**  
+> Begitu pesanan dikonfirmasi **Selesai**, dana transaksi yang sebelumnya tertahan di **Saldo Pending** akan secara otomatis dikonversi dan dipindahkan ke **Saldo Aktif** Mitra, sehingga siap digunakan untuk transaksi maupun ditarik (*withdraw*) ke rekening pribadi/e-wallet.
+
+![Status Pesanan Selesai](/image/sell-done-ambil.png)
+
+---
+
+## Perbandingan Alur: Dikirim Kurir vs Diambil Sendiri
+
+| Indikator | Penjualan Dikirim Kurir | Penjualan Diambil Sendiri |
+| :--- | :--- | :--- |
+| **Pilihan Lokasi** | Otomatis dialokasikan sistem | Dipilih langsung oleh pembeli |
+| **Dampak Penolakan** | Pesanan dilempar (*re-route*) ke mitra lain | Pesanan langsung batal (tidak dilempar) |
+| **Tahap Penyerahan** | Diserahkan ke pihak Kurir Logistik | Diambil langsung oleh Pembeli ke lokasi |
+| **Status Perjalanan** | `Diproses` ➔ `Dikirim` ➔ `Selesai` | `Diproses` ➔ `Siap Diambil` ➔ `Selesai` |
+| **Mutasi Saldo** | Ditambah ke **Saldo Pending** saat diterima ➔ Berpindah ke **Saldo Aktif** saat `Selesai` | Ditambah ke **Saldo Pending** saat diterima ➔ Berpindah ke **Saldo Aktif** saat `Selesai` |

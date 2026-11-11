@@ -1,0 +1,61 @@
+---
+title: Penjualan Dikirim Kurir
+icon: Truck
+---
+
+Halaman **Penjualan Dikirim Kurir** menyajikan panduan langkah demi langkah bagi Mitra dalam mengelola dan memproses pesanan masuk yang menggunakan layanan pengiriman via kurir logistik.
+
+---
+
+## Langkah Pemrosesan Pesanan Kurir
+
+### 1. Pesanan Masuk (Menunggu Persetujuan Mitra)
+Ketika terdapat pesanan baru yang masuk ke sistem, Anda akan diberi pilihan untuk menerima atau menolak pesanan tersebut saat statusnya masih **Menunggu Persetujuan Mitra**.
+
+* **Menerima Pesanan**: Jika menyetujui, klik tombol **[Terima Pesanan]**. Status pesanan akan berlanjut ke tahap pemrosesan.  
+  > **Catatan Saldo:** Saat Anda menerima pesanan, nominal pembayaran transaksi akan secara otomatis dicatat dan menambah **Saldo Pending** akun Mitra Anda.
+* **Menolak Pesanan**: Jika Anda menolak pesanan (misalnya stok habis atau toko tutup), Anda wajib memilih/mengisi alasan penolakan pada pop-up yang muncul. Pesanan yang ditolak pada tahap ini akan secara otomatis **dilempar (re-route) oleh sistem ke mitra lain**.
+
+![Status Menunggu Persetujuan Mitra](/image/sell-wait-kurir.png)
+![Form Alasan Penolakan Pesanan](/image/sell-reason-kurir.png)
+
+---
+
+### 2. Memproses dan Menyiapkan Produk
+Setelah pesanan diterima, status pesanan akan berubah menjadi **Diproses**. Pada tahap ini, mitra diharuskan untuk segera menyiapkan dan mengemas produk.
+
+> **Penting (Aturan Pembatalan Tahap Proses):**  
+> Apabila mitra membatalkan pesanan saat posisi sudah dalam status **Diproses**, maka pesanan akan **langsung terbatalkan secara permanen** oleh sistem (tidak dilempar ke mitra lain) dan *Saldo Pending* yang sebelumnya tercatat untuk pesanan ini akan dibatalkan/dikembalikan oleh sistem.
+
+![Status Pesanan Diproses](/image/sell-proses-kurir.png)
+![Tampilan Pembatalan Pesanan Diproses](/image/sell-reject-kurir.png)
+
+---
+
+### 3. Pengiriman Pesanan (Dikirim Kurir)
+Setelah paket selesai disiapkan dan diserahkan ke pihak kurir, tekan tombol **[Kirim]**. 
+
+Status pesanan akan berubah menjadi **Dikirim**. Pada tahap ini, paket sedang dalam perjalanan via kurir menuju alamat lokasi pembeli.
+
+![Status Pesanan Dikirim Kurir](/image/sell-kirim-kurir.png)
+
+---
+
+### 4. Pesanan Selesai
+Setelah produk sampai di lokasi dan pembeli menekan tombol **[Selesai]** pada aplikasi (atau pesanan dikonfirmasi selesai secara otomatis oleh sistem), status transaksi secara resmi berubah menjadi **Selesai**. 
+
+> **Konversi Saldo Otomatis:**  
+> Begitu transaksi berstatus **Selesai**, dana transaksi yang berada di **Saldo Pending** Anda akan secara otomatis dikonversi dan berpindah menjadi **Saldo Aktif**, yang siap digunakan untuk transaksi operasional maupun ditarik (*withdraw*) ke rekening pribadi/e-wallet.
+
+![Status Pesanan Selesai](/image/sell-done-kurir.png)
+
+---
+
+## Ringkasan Alur Status & Saldo Mitra
+
+| Status Pesanan | Aksi Mitra | Dampak Pembatalan | Perubahan Saldo Mitra |
+| :--- | :--- | :--- | :--- |
+| **Menunggu Persetujuan** | Terima / Tolak | Pesanan dilempar (*re-route*) ke mitra lain | Belum ada perubahan saldo |
+| **Diproses** | Siapkan Produk | Pesanan batal permanen | **Saldo Pending** bertambah (+) |
+| **Dikirim** | Serahkan ke Kurir | Mengikuti alur | Saldo tetap berada di **Saldo Pending** |
+| **Selesai** | Transaksi Tuntas | Transaksi ditutup | **Saldo Pending** ➔ **Saldo Aktif** (siap dicairkan) |

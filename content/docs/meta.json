@@ -1,24 +1,3 @@
 {
-  "title": "Dokumentasi teem.id",
-  "pages": [
-    "index",
-    "---PENGENALAN---",
-    "gambaran-umum",
-    "tampilan-teem",
-    "---PANDUAN PENGGUNA BARU---",
-    "registrasi",
-    "login",
-    "---MENU AKUN DAN PROFIL---",
-    "profil",
-    "pembelian-saya",
-    "saldo-saya",
-    "poin-saya",
-    "alamat-pengiriman",
-    "support",
-    "---PANDUAN PEMESANAN---",
-    "pemesanan",
-    "kupon",
-    "point",
-    "status-proses-pesanan"
-  ]
-}
+      "pages": ["index", "umum", "end-user", "partner"]
+    }

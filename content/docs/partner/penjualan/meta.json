@@ -1,0 +1,11 @@
+{
+  "title": "Penjualan",
+  "icon": "ShoppingBag",
+  "pages": [
+    "penjualan",
+    "kurir",
+    "ambil",
+    "offline",
+    "cancel"
+  ]
+}

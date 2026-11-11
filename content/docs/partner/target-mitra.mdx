@@ -1,0 +1,75 @@
+---
+title: Target Mitra
+icon: Target
+---
+
+Halaman **Target Mitra** berfungsi sebagai panel pemantauan performa penjualan dan capaian target pendapatan bisnis bagi Mitra. Melalui halaman ini, Mitra dapat menganalisis perbandingan antara sasaran target yang ditetapkan oleh pusat dengan realisasi secara bulanan melalui indikator statistik, grafik visual, dan tabel detail pencapaian. Halaman ini memiliki **2 tab**: **Target Nominal** dan **Target Kuantitas**.
+
+---
+
+## Antarmuka Pemantauan Target Mitra
+
+Antarmuka **Target Mitra** menyajikan performa secara transparan yang diperbarui berdasarkan transaksi yang berhasil direalisasikan. Gunakan tab di bagian atas halaman untuk berpindah tampilan:
+
+* **Target Nominal**: Memantau target berdasarkan nilai pendapatan (Rupiah).
+* **Target Kuantitas**: Memantau target berdasarkan jumlah produk terjual.
+
+### Tab 1: Target Nominal
+
+![Tampilan Tab Target Nominal](/image/target-mitra.png)
+
+### 1. Filter Periode (Tahun & Bulan)
+Di pojok kanan atas halaman, Mitra dapat memfilter data performa target berdasarkan periode spesifik:
+* **Pilihan Tahun**: Memilih tahun anggaran/operasional (contoh: `2026`).
+* **Pilihan Bulan**: Memilih bulan spesifik yang ingin dianalisis (contoh: `September`).
+
+---
+
+## Ringkasan Kartu Performa (Summary Cards)
+
+Sistem menampilkan 4 indikator utama (*KPI Metrics*) untuk memberikan gambaran cepat mengenai pencapaian bisnis Mitra pada periode terpilih:
+
+* **TARGET**: Besarnya nominal pendapatan yang ditargetkan untuk direalisasikan oleh Mitra dalam satu bulan (contoh: `Rp 1.000.000`).
+* **REALISASI**: Total akumulasi pendapatan kotor/penjualan nyata yang berhasil dicapai oleh Mitra pada periode tersebut (contoh: `Rp 12.270.000`).
+* **SELISIH**: Selisih nilai antara Realisasi dan Target. Tanda positif (`+`) mengindikasikan pencapaian melampaui target yang ditetapkan (contoh: `+Rp 11.270.000`).
+* **PERSENTASE**: Tingkat ketercapaian target dalam bentuk persentase (`(Realisasi / Target) x 100%`). Indikator hijau menandakan performa melampaui target (contoh: `1227%`).
+
+---
+
+## Grafik Visual Target vs Realisasi
+
+Di bagian tengah halaman, terdapat grafik batang (*Bar Chart*) visual **Target vs Realisasi** yang membandingkan pencapaian performa pada bulan terpilih:
+
+* **Batang Realisasi (Merah/Maroon)**: Menunjukkan nominal pendapatan nyata yang berhasil dikumpulkan.
+* **Batang Target (Abu-abu)**: Menunjukkan batas target bulanan.
+* **Interactive Tooltip**: Saat mengarahkan kursor (*hover*) ke grafik, sistem akan memunculkan pop-up rincian informasi bulan, nominal realisasi, serta nominal target.
+
+---
+
+## Tabel Detail Target Bulanan
+
+Di bagian bawah antarmuka, menyajikan tabel rekapitulasi **Detail Target Bulanan** yang memuat break-down data secara matematis:
+
+| Kolom Tabel | Keterangan |
+| :--- | :--- |
+| **BULAN** | Periode bulan dan tahun pencapaian (contoh: `Sep 2026`). |
+| **TARGET** | Nominal target pendapatan bulanan. |
+| **REALISASI** | Nominal pendapatan nyata yang terealisasi. |
+| **SELISIH** | Surplus atau defisit pencapaian nominal. |
+| **PERSENTASE** | Badge persentase ketercapaian target. |
+
+*Tabel ini dilengkapi dengan kontrol paginasi untuk memudahkan navigasi jika Mitra melihat riwayat target dalam rentang waktu yang lebih panjang.*
+
+---
+
+## Tab 2: Target Kuantitas
+
+Tab **Target Kuantitas** memantau pencapaian Mitra berdasarkan **jumlah produk terjual**, bukan nominal pendapatan. Tampilan dan cara membacanya sama dengan Tab Target Nominal (filter periode, kartu ringkasan, grafik, dan tabel detail bulanan), namun seluruh angka ditampilkan dalam satuan kuantitas.
+{/* TODO: konfirmasi satuan kuantitas (unit/pcs/slop) dan apakah kartu, grafik, serta kolom tabelnya identik dengan Target Nominal */}
+
+![Tampilan Tab Target Kuantitas](/image/target-mitra-kuantitas.png)
+
+* **TARGET**: Jumlah produk yang ditargetkan terjual dalam satu bulan.
+* **REALISASI**: Jumlah produk yang berhasil terjual pada periode tersebut.
+* **SELISIH**: Selisih kuantitas antara Realisasi dan Target (`+` berarti melampaui target).
+* **PERSENTASE**: Tingkat ketercapaian target kuantitas (`(Realisasi / Target) x 100%`).

@@ -1,0 +1,62 @@
+---
+title: Dashboard
+icon: LayoutDashboard
+---
+
+Halaman **Dashboard** merupakan pusat kendali operasional mitra yang menyajikan ringkasan metrik bisnis, statistik penjualan, pemantauan target, serta kontrol status operasional toko secara *real-time*.
+
+---
+
+![Tampilan Halaman Dashboard](/image/dashboard.png)
+## Filter & Operasional Toko
+
+Pada bagian atas Dashboard, terdapat opsi pengaturan cepat untuk memfilter data analitik serta mengatur visibilitas toko:
+
+* **Filter Rentang Waktu**: Memungkinkan Anda menyaring seluruh data statistik penjualan berdasarkan periode tertentu. Pilihan yang tersedia meliputi:
+  * Minggu Ini
+  * Bulan Ini
+  * 30 Hari Terakhir
+  * *Custom Date* (Pilih tanggal mulai dan selesai secara kustom)
+* **Toggle Toko (Online / Offline)**: Fitur kontrol status operasional toko mitra.
+  * **Aktif (Online)**: Toko siap menerima pesanan masuk dari pembeli.
+  * **Nonaktif (Offline)**: Toko dalam status tidak menerima pesanan. Sistem secara otomatis akan menghentikan alokasi orderan masuk selama toggle berada dalam posisi offline. Untuk menonaktifkan toko, Mitra **wajib mengisi alasan** dan **menentukan rentang waktu** penonaktifan.
+
+### Modal Konfirmasi Status Toko
+Untuk mencegah perubahan status toko secara tidak sengaja (*unintentional click*), sistem menyediakan **Modal Konfirmasi Perubahan Status Toko**. Setiap kali Mitra menekan *toggle* untuk mengaktifkan atau menonaktifkan toko, sistem akan menampilkan *popup* konfirmasi terlebih dahulu:
+
+![Modal Konfirmasi Status Toko](/image/online-off.png)
+
+* **Alasan Penonaktifan** *(khusus menonaktifkan toko)*: Wajib diisi. Tuliskan alasan toko dinonaktifkan.
+* **Rentang Waktu** *(khusus menonaktifkan toko)*: Wajib diisi. Tentukan periode toko akan berstatus nonaktif.
+{/* TODO: konfirmasi bentuk input rentang waktu (tanggal mulai-selesai / durasi) dan perilaku toko setelah rentang berakhir */}
+* **Tombol Batal**: Membatalkan tindakan dan mempertahankan status toko sebelumnya.
+* **Tombol Ya, Aktifkan / Ya, Nonaktifkan**: Mengonfirmasi tindakan untuk segera mengubah status operasional toko secara *real-time*.
+
+---
+
+## Komponen Utama Dashboard
+
+### 1. Grafik Trend Penjualan
+Visualisasi grafik interaktif yang menampilkan performa gabungan dari transaksi **Penjualan Online** dan **Penjualan Offline**. Grafik ini membantu mitra memantau naik-turunnya omzet dan volume transaksi dalam rentang waktu yang dipilih.
+
+### 2. Progres Target Kemitraan
+Widget pemantauan indikator kinerja utama (KPI) yang menyajikan komparasi antara **Target Penjualan** yang ditetapkan dengan **Realisasi Capaian** mitra saat ini.
+
+### 3. Pesanan Baru
+Daftar transaksi terbaru yang masuk dan membutuhkan tindakan segera dari mitra (seperti konfirmasi pesanan atau persiapan pengemasan barang).
+
+### 4. Aktivitas Terbaru
+Log riwayat aktivitas operasional terkini pada akun mitra, seperti pembaruan status pesanan, penyesuaian stok, atau mutasi saldo.
+
+---
+
+## Ringkasan Fitur Dashboard
+
+| Komponen / Fitur | Deskripsi Fungsi |
+| :--- | :--- |
+| **Filter Periode** | Menyaring data grafik dan statistik (Minggu ini, Bulan ini, 30 Hari, Kustom). |
+| **Toggle Status Toko** | Membuka/menutup penerimaan orderan toko (Online/Offline). Menonaktifkan toko wajib disertai alasan dan rentang waktu, dilengkapi modal konfirmasi keamanan. |
+| **Grafik Penjualan** | Memantau tren transaksi harian/bulanan dari kanal Online & Offline. |
+| **Progres Target** | Melacak persentase perbandingan antara target dan realisasi penjualan. |
+| **Pesanan Baru** | Menampilkan antrean orderan terbaru yang butuh segera diproses. |
+| **Aktivitas Terbaru** | Catatan rekam jejak (*log activity*) operasional akun secara *real-time*. |

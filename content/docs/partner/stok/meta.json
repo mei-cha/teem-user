@@ -1,0 +1,9 @@
+{
+  "title": "Stok",
+  "icon": "Package",
+  "pages": [
+    "stok-mitra",
+    "pembelian-stock",
+    "pembelian-saya"
+  ]
+}

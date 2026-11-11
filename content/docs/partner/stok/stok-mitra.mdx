@@ -1,0 +1,61 @@
+---
+title: Stok Mitra
+icon: Boxes
+---
+
+Halaman **Stok Mitra** digunakan untuk memantau ketersediaan barang operasional secara *real-time*, melacak alokasi produk yang sedang diproses dalam pesanan, serta menganalisis pergerakan stok toko Anda.
+
+---
+
+![Tampilan Halaman Stok mitra](/image/stok.png)
+
+## Memahami Jenis Stok
+
+Untuk menjaga akurasi persediaan barang dan mencegah pembeli memesan produk yang sama (*overbooking*), sistem teem.id membagi indikator stok menjadi 2 jenis:
+
+* **Stok Utama (Tersedia)**: Jumlah barang yang siap dan tersedia untuk dibeli oleh pelanggan baru.
+* **Stok Reservasi (Reserved)**: Jumlah barang yang sedang dialokasikan atau dikunci oleh sistem karena sedang dalam proses transaksi (pesanan masuk, sedang diproses, atau siap dikirim/diambil).
+
+---
+
+## Dinamika Perubahan Stok Berdasarkan Alur Pesanan
+
+Sistem secara otomatis mengelola pemindahan kuantitas barang sesuai dengan status transaksi berjalan:
+
+1. **Pesanan Masuk & Diproses**:  
+   Saat pembeli melakukan pemesanan, kuantitas pada **Stok Utama** akan otomatis berkurang, dan kuantitas pada **Stok Reservasi** akan bertambah sejumlah produk yang dipesan.
+2. **Pesanan Dibatalkan (Cancel / Reject)**:  
+   Jika transaksi yang sedang berjalan dibatalkan (baik oleh pembeli maupun ditolak oleh mitra), barang dari **Stok Reservasi** akan otomatis dikembalikan (*restore*) menjadi **Stok Utama** sehingga siap dijual kembali.
+3. **Pesanan Selesai (Completed)**:  
+   Setelah pesanan dikonfirmasi **Selesai** oleh pembeli, kuantitas pada **Stok Reservasi** akan berkurang secara permanen karena barang telah resmi berpindah tangan.
+
+---
+
+## Produk Dihapus atau Dinonaktifkan Admin
+
+Halaman Stok menampilkan seluruh produk yang tercatat pada data stok Anda. Apabila suatu produk (misalnya **Produk A**) dihapus atau dinonaktifkan oleh admin:
+
+* Produk A **tidak lagi muncul di halaman Pembelian Stok**, sehingga tidak dapat dibeli atau di-*restock*.
+* Produk A **tetap tersedia di halaman Stok dan halaman Penjualan Offline**, karena kedua halaman tersebut mengambil data dari data stok Anda.
+
+---
+
+## Fitur Pencarian & Filter Stok
+
+Untuk mempermudah manajemen inventaris, halaman ini dilengkapi dengan alat bantu pencarian dan penyaringan data:
+
+* **Kolom Pencarian (Search)**: Cari produk spesifik dengan cepat menggunakan **Nama Produk** atau **SKU**.
+* **Pilihan Filter Stok**: Saring dan urutkan daftar inventaris berdasarkan kebutuhan operasional:
+  * **Stok Sedikit**: Menampilkan produk dengan sisa Stok Utama paling terbatas (memudahkan identifikasi produk yang perlu di-*restock*).
+  * **Stok Terbanyak**: Menampilkan produk dengan ketersediaan Stok Utama paling melimpah.
+  * **Reserved Terbanyak**: Menampilkan produk yang saat ini paling banyak dipesan/sedang tertahan pada transaksi aktif.
+
+---
+
+## Matriks Perubahan Kuantitas Stok
+
+| Kondisi Transaksi | Perubahan Stok Utama | Perubahan Stok Reservasi | Status Akhir Barang |
+| :--- | :--- | :--- | :--- |
+| **Pesanan Baru Masuk** | Berkurang (<b>-</b>) | Bertambah (<b>+</b>) | Barang dikunci oleh sistem |
+| **Pesanan Dibatalkan** | Bertambah (<b>+</b>) | Berkurang (<b>-</b>) | Barang kembali siap dijual |
+| **Pesanan Selesai** | Tetap | Berkurang (<b>-</b>) | Barang resmi keluar dari inventaris |

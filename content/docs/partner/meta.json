@@ -1,0 +1,18 @@
+{
+  "title": "Dokumentasi mitra teem.id",
+  "root": true,
+  "pages": [
+    "---PENGENALAN---",
+    "gambaran-umum",
+    "tampilan-teem",
+    "---PANDUAN PENGGUNA BARU---",
+    "menjadi-mitra",
+    "---MENU MITRA---",
+    "profile-mitra",
+    "dashboard",
+    "saldo",
+    "penjualan",
+    "stok",
+    "target-mitra"
+  ]
+}
