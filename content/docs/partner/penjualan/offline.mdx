@@ -13,22 +13,50 @@ Halaman **Penjualan Offline** digunakan untuk mencatat seluruh transaksi penjual
 
 ---
 
-## 1. Langkah-Langkah Pencatatan Penjualan Offline
+## 1. Memilih Kategori Penjualan
+
+Saat membuka halaman **Penjualan Offline**, Anda diminta memilih **kategori penjualan** terlebih dahulu. Setiap kategori memiliki data pembeli yang wajib diisi dan batas jumlah pembelian yang berbeda.
+
+![Pilih Kategori Penjualan Offline](/image/offline-kategori.png)
+
+| Kategori | Untuk Siapa | Data Wajib | Batas per Produk |
+| :--- | :--- | :--- | :--- |
+| **Penjualan Reguler** | Individu/pihak yang membeli untuk digunakan secara pribadi dan tidak dijual kembali | Nama pembeli | Maks. **2 Slop** |
+| **Penjualan Reseller** | Individu/pihak yang membeli untuk dijual kembali | Nama pembeli, No. telepon, Alamat pembeli | Maks. **7 Slop** |
+| **Penjualan Khusus** | Individu/pihak dengan kebutuhan khusus/insidental (event, acara, kegiatan tertentu, atau kebutuhan khusus lainnya) | Nama pembeli, No. telepon, Tujuan | Maks. **20 Slop** |
+
+Setelah kategori dipilih, nama kategori tampil di bagian atas halaman. Klik **[Ganti]** apabila Anda ingin memilih kategori lain.
+
+---
+
+## 2. Langkah-Langkah Pencatatan Penjualan Offline
 
 Untuk mencatat transaksi penjualan fisik baru, ikuti tahapan berikut:
 
-1. **Pilih Produk**: Tentukan produk beserta variasi dan jumlah (*quantity*) yang dibeli oleh pelanggan pada katalog pencatatan.
-2. **Input Data Pelanggan (Opsional)**: Anda dapat mengisi data berikut pada kolom yang tersedia. **Seluruh kolom bersifat opsional**, boleh dikosongkan:
-   * **Nama Pelanggan**
-   * **Nomor Telepon**
-   * **Alamat**
-   * **Tujuan**
-   {/* TODO: konfirmasi arti "Tujuan" pada form (tujuan pembelian / tujuan pengiriman / lainnya) */}
-3. **Update Stok & Simpan**: Klik tombol **[Update Stok]** untuk memproses pengurangan stok otomatis dan menyimpan catatan transaksi.
+1. **Pilih Kategori**: Pilih salah satu kategori penjualan (lihat bagian 1).
+2. **Pilih Produk**: Cari produk melalui kolom pencarian atau tombol **[Filter]**, lalu tentukan satuan (**Slop**, **Bal**, atau **Karton**) dan jumlah yang dibeli pelanggan. Produk yang dipilih akan masuk ke panel **Struk Pembelian**. Jumlah pembelian tidak boleh melebihi **batas kategori** yang tertera di bawah form data pembeli.
+3. **Isi Data Pembeli**: Lengkapi kolom pada bagian **Data pembeli** sesuai kategori. Kolom bertanda **\*** wajib diisi.
+4. **Update Stok & Simpan**: Klik tombol **[Update Stok]** untuk memproses pengurangan stok otomatis dan menyimpan catatan transaksi.
 
-![Form Pencatatan Penjualan Offline](/image/offline.png)
+### Form Penjualan Reguler
 
-4. **Konfirmasi & Berhasil**: Setelah transaksi disimpan, akan muncul *pop-up* **Penjualan Terkatat** yang menandakan transaksi berhasil. Pada jendela ini tersedia dua opsi:
+Nama pembeli wajib diisi. **No. telepon** dan **Alamat pembeli** bersifat **opsional**.
+
+![Form Penjualan Reguler](/image/offline-reguler.png)
+
+### Form Penjualan Reseller
+
+**Nama pembeli**, **No. telepon**, dan **Alamat pembeli** wajib diisi.
+
+![Form Penjualan Reseller](/image/offline-reseller.png)
+
+### Form Penjualan Khusus
+
+**Nama pembeli**, **No. telepon**, dan **Tujuan** wajib diisi. Isi **Tujuan** dengan keperluan pembelian (misalnya nama event atau kegiatan).
+
+![Form Penjualan Khusus](/image/offline-khusus.png)
+
+5. **Konfirmasi & Berhasil**: Setelah transaksi disimpan, akan muncul *pop-up* **Penjualan Terkatat** yang menandakan transaksi berhasil. Pada jendela ini tersedia dua opsi:
    * **[Selesai]**: Menutup jendela konfirmasi dan kembali ke menu awal.
    * **[Cetak Struk]**: Mencetak bukti transaksi langsung.
 
@@ -36,9 +64,9 @@ Untuk mencatat transaksi penjualan fisik baru, ikuti tahapan berikut:
 
 ---
 
-## 2. Riwayat Penjualan Offline
+## 3. Riwayat Penjualan Offline
 
-Anda dapat mengakses dan meninjau seluruh catatan transaksi terdahulu dengan menekan tombol **[Riwayat Penjualan]** yang berada di sudut kanan atas halaman.
+Anda dapat mengakses dan meninjau seluruh catatan transaksi terdahulu dengan menekan tombol **[Riwayat Transaksi]** yang berada di sudut kanan atas halaman.
 
 ### Fitur Ringkasan & Statistik Riwayat
 Pada bagian atas halaman riwayat, sistem menyajikan indikator performa transaksi offline mencakup:
@@ -48,7 +76,6 @@ Pada bagian atas halaman riwayat, sistem menyajikan indikator performa transaksi
 * **Produk Terjual per Slop**: Total kuantitas unit produk yang berhasil dijual.
 
 ![Tampilan Riwayat Penjualan Offline](/image/offline-history.png)
-{/* TODO: pastikan sc riwayat sudah memakai tampilan terbaru (termasuk data telepon/alamat/tujuan jika tampil) */}
 
 ---
 
