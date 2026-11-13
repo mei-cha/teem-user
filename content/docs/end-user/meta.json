@@ -3,19 +3,19 @@
   "root": true,
   "pages": [
     "---PENGENALAN---",
-    "gambaran-umum",
-    "tampilan-teem",
+    "overview",
+    "teem-interface",
     "---MENU AKUN DAN PROFIL---",
-    "profil",
-    "pembelian-saya",
-    "saldo-saya",
-    "poin-saya",
-    "alamat-pengiriman",
+    "profile",
+    "my-purchases",
+    "my-balance",
+    "my-points",
+    "shipping-address",
     "support",
     "---PANDUAN PEMESANAN---",
-    "pemesanan",
-    "kupon",
+    "ordering",
+    "coupon",
     "point",
-    "status-proses-pesanan"
+    "order-status"
   ]
 }

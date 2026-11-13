@@ -31,12 +31,15 @@ Sistem secara otomatis mengelola pemindahan kuantitas barang sesuai dengan statu
 
 ---
 
-## Produk Dihapus atau Dinonaktifkan Admin
+## Produk yang Dinonaktifkan Admin
 
-Halaman Stok menampilkan seluruh produk yang tercatat pada data stok Anda. Apabila suatu produk (misalnya **Produk A**) dihapus atau dinonaktifkan oleh admin:
+Admin dapat menonaktifkan atau menghapus suatu produk dari sistem, misalnya karena produk tersebut sudah tidak diproduksi lagi. Jika Anda **masih memiliki sisa stok** produk tersebut:
 
-* Produk A **tidak lagi muncul di halaman Pembelian Stok**, sehingga tidak dapat dibeli atau di-*restock*.
-* Produk A **tetap tersedia di halaman Stok dan halaman Penjualan Offline**, karena kedua halaman tersebut mengambil data dari data stok Anda.
+* Produk **tetap tercantum di halaman Stok** beserta sisa stok Anda.
+* Produk **masih dapat dijual, tetapi hanya melalui Penjualan Offline**. Produk tidak dapat dijual melalui penjualan online.
+* Produk **tidak lagi muncul di halaman Pembelian Stok**, sehingga tidak dapat dibeli atau di-*restock* lagi.
+
+Hal ini karena halaman Stok dan Penjualan Offline mengambil data dari **data stok Anda**, sedangkan halaman Pembelian Stok hanya menampilkan produk yang masih aktif di katalog.
 
 ---
 

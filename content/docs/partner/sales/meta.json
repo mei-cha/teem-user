@@ -2,9 +2,9 @@
   "title": "Penjualan",
   "icon": "ShoppingBag",
   "pages": [
-    "penjualan",
-    "kurir",
-    "ambil",
+    "online-sales",
+    "courier",
+    "pickup",
     "offline",
     "cancel"
   ]

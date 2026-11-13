@@ -1,0 +1,122 @@
+---
+title: Pembelian Stok (Restock)
+icon: ShoppingBag
+---
+
+Halaman **Pembelian Stok** (*Restock*) memungkinkan Mitra untuk melakukan pengisian ulang inventaris toko secara mandiri. Melalui antarmuka ini, Mitra dapat memesan berbagai varian produk yang tersedia di katalog pusat dengan pilihan kemasan grosir, alur yang terintegrasi, serta fitur khusus kebutuhan *B2B Restock*.
+
+---
+
+## Antarmuka Katalog Pembelian Stok
+
+Pada antarmuka ini, Mitra dapat melihat daftar katalog produk yang terbagi berdasarkan kategori. Setiap produk menampilkan total sisa stok yang tersedia di pusat serta variasi opsi satuan pembelian.
+
+![Tampilan Katalog Pembelian Stok](/image/restock.png)
+
+### 1. Multi-Satuan Kemasan Grosir
+Untuk mempermudah pembelian jumlah besar, setiap produk dilengkapi dengan pilihan variasi kemasan berjenjang beserta harga khusus grosir:
+* **Slop**: Satuan terkecil.
+* **Bal**: Satuan menengah, berisi sejumlah Slop.
+* **Karton**: Satuan terbesar, berisi sejumlah Slop atau Bal.
+
+Isi tiap satuan (berapa Slop dalam satu Bal atau Karton) **diatur oleh admin dan dapat berbeda untuk tiap produk**. Angka di samping nama satuan, misalnya **x20**, menunjukkan isi satuan tersebut.
+
+Mitra dapat menentukan jumlah barang secara fleksibel dengan menekan tombol penambah/pengurang (`+` / `-`) pada masing-masing tingkat satuan kemasan.
+
+### 2. Fitur Pencarian & Filter Produk
+Mitra dapat memanfaatkan kolom pencarian serbaguna (*search bar*) untuk menemukan produk dengan cepat berdasarkan:
+* **Nama Produk** (contoh: *Tani Madjoe*, *Assikha Habbats*, *Nate Tani Madjoe*).
+* **Kode SKU** produk.
+* **Satuan** kemasan.
+
+---
+
+## Dua Cara Membeli Stok
+
+Ada dua cara membeli stok, tergantung apakah Anda menekan tombol **[Restock]** atau tidak. Keduanya mengikuti **minimal pembelian** yang diatur oleh admin untuk Anda.
+
+| | **Lewat Tombol Restock** | **Tanpa Tombol Restock** |
+| :--- | :--- | :--- |
+| **Produk di keranjang** | Terisi otomatis dengan produk wajib | Kosong, Anda pilih sendiri |
+| **Pilihan produk** | Produk wajib terkunci, tidak bisa dihapus | Bebas memilih produk mana saja |
+| **Jumlah** | Produk wajib tidak bisa dikurangi dari minimum, bisa ditambah | Produk yang punya minimal belanja tetap tidak boleh di bawah minimum |
+
+### A. Membeli Lewat Tombol Restock
+
+Saat Anda menekan tombol **[Restock]**, sistem langsung memasang **produk-produk yang wajib dibeli** beserta **jumlah minimalnya** ke dalam ringkasan pembelian. Daftar produk dan jumlah ini ditentukan oleh **pengaturan admin** untuk level kemitraan Anda (**Sub Agen**, **Agen**, atau **Distributor**).
+
+
+
+Cara membaca tampilan pada mode Restock:
+* **Paket restock**: Di bawah nama produk wajib tertera paket yang harus dibeli, misalnya *Paket restock: 1 Karton* atau *1 Bal + 1 Karton*.
+* **Label Minimal**: Pada setiap satuan tertera batas minimal pembelian untuk satuan tersebut. Tombol `-` tidak aktif saat jumlah sudah mencapai batas minimal.
+* **Subtotal produk**: Dihitung dari jumlah yang Anda pilih pada tiap satuan.
+
+Ketentuan pada produk wajib:
+* **Terkunci**: Produk wajib tidak dapat dihapus dari ringkasan pembelian.
+* **Bisa ditambah, tidak bisa dikurangi**: Jumlahnya boleh ditambah di atas minimum, tetapi tidak boleh dikurangi di bawah minimum.
+* **Boleh pakai satuan lebih kecil**: Anda tidak harus membeli dengan satuan yang tertulis di paket. Satuan yang lebih kecil juga bisa dipakai, dan minimalnya otomatis **dikonversi** dari paket wajib. Cukup ikuti angka pada label **Minimal**, karena sistem sudah menghitungkannya untuk Anda.
+
+> **Contoh singkat:** Produk A wajib dibeli **1 Karton**. Anda bisa membelinya dalam **Karton** (minimal 1), atau dalam **Slop** dengan jumlah yang setara satu Karton. Berapa Slop yang setara dengan 1 Karton mengikuti pengaturan admin, dan tampil pada label **Minimal** di baris Slop.
+
+Produk di luar paket wajib tidak memiliki batas minimal.
+{/* TODO: konfirmasi apakah produk di luar paket wajib boleh ditambah di mode Restock, dan apakah ada tombol untuk keluar dari mode Restock (sebelumnya "Batalkan Pembelian Awal") */}
+
+### B. Membeli Tanpa Tombol Restock
+
+Jika Anda **tidak** menekan tombol **[Restock]**, Anda **bebas memilih produk mana pun** yang ingin dibeli.
+
+
+Namun, apabila salah satu produk yang Anda pilih memiliki **minimal belanja untuk Anda** (aturan yang sama dengan mode Restock), maka **minimal pembelian pada produk tersebut tetap berlaku**, meskipun Anda tidak membeli lewat tombol Restock. Perbedaannya, Anda **tidak diwajibkan** membeli produk wajib lainnya, dan hanya memilih produk yang Anda butuhkan.
+
+> **Contoh:** Produk A memiliki minimal belanja, Produk B tidak. Jika keduanya dibeli tanpa tombol Restock, Produk A tetap tidak bisa dibeli di bawah minimal, sedangkan Produk B boleh dibeli dalam jumlah berapa pun.
+
+---
+
+## Ringkasan Pembelian & Alur Checkout
+
+Di panel sebelah kanan, sistem akan menampilkan panel **Ringkasan Pembelian** secara *real-time* yang mencakup:
+* Jumlah **Produk Dipilih**.
+* **Total Barang** yang dipesan.
+* Akumulasi **Total Harga**.
+
+### Langkah Menyelesaikan Pesanan:
+
+1. Setelah penentuan kuantitas selesai (baik lewat tombol Restock maupun memilih produk sendiri), tekan tombol **[Beli]**.
+2. Anda akan diarahkan ke **Halaman Checkout** yang mengusung alur pemesanan intuitif standar konsumen.
+3. Tinjau kembali rincian daftar barang dan harga grosir yang dipesan.
+4. Tentukan alamat tujuan pengiriman lokasi toko/gudang Mitra serta pilih **Metode Pembayaran** resmi yang tersedia.
+5. Selesaikan pembayaran sesuai invoice agar pesanan segera diproses oleh pihak pusat/distributor.
+
+
+---
+
+## Opsi Metode Pembayaran Khusus
+
+Sistem menyediakan beberapa jalur opsi pembayaran pada halaman checkout:
+
+### 1. Payment Gateway Midtrans (Semua Level Mitra)
+Tersedia bagi seluruh level kemitraan (Sub-Agen, Agen, dan Distributor) melalui **Midtrans**, mencakup **Virtual Account**, **E-Wallet**, dan **QRIS** (All Bank & E-Wallet). Transaksi melalui jalur ini akan terverifikasi secara otomatis oleh sistem.
+
+### 2. Transfer ke Rekening Perusahaan (Total Order ≥ Rp300 Juta)
+Metode pembayaran **Transfer ke Rekening Perusahaan** secara langsung (tanpa melalui *payment gateway*) **hanya tampil apabila total order mencapai Rp300.000.000 atau lebih (≥ Rp300 juta)**. Jika total order di bawah nominal tersebut, opsi ini tidak ditampilkan.
+{/* TODO: konfirmasi apakah syarat ini menggantikan aturan lama "khusus Mitra Distributor", atau keduanya berlaku */}
+
+
+* **Informasi Rekening**: Sistem menampilkan detail Bank Tujuan (contoh: *Bank Central Asia / BCA*), Nomor Rekening, serta Atas Nama resmi perusahaan (*Javarata*).
+* **Alur Verifikasi Manual**:
+  1. Setelah membuat pesanan, status transaksi awal akan menjadi **Pending**.
+  2. Mitra melakukan transfer nominal sesuai total tagihan invoice dan menyimpan bukti transfernya.
+  3. Konfirmasi pembayaran dilakukan secara langsung oleh **Admin Perusahaan** (bukan otomatis dari payment gateway) setelah dana masuk diperiksa di rekening resmi perusahaan.
+
+---
+
+## Ringkasan Alur Kerja Restock Stok
+
+| Tahapan | Deskripsi Akses & Tindakan | Dampak pada Sistem |
+| :--- | :--- | :--- |
+| **1. Pilih Kemasan** | Tentukan kuantitas per **Slop**, **Bal**, atau **Karton** | Kuantitas dan total harga langsung terakumulasi |
+| **2. Restock atau Pilih Sendiri** | Tekan **[Restock]** (produk wajib terpasang otomatis) atau pilih produk sendiri | Minimal pembelian dari admin tetap berlaku pada produk yang memilikinya |
+| **3. Klik Beli** | Menekan tombol **[Beli]** pada panel ringkasan | Mengarahkan ke halaman ringkasan checkout |
+| **4. Pilih Pembayaran** | *Payment Gateway* Midtrans (semua level) atau *Transfer Rekening Perusahaan* (total order ≥ Rp300 juta) | Menentukan alur verifikasi (Otomatis vs Konfirmasi Admin Perusahaan) |
+| **5. Checkout & Bayar** | Pilih metode pengiriman dan lunasi pembayaran invoice | Pesanan diteruskan ke pusat & stok akan bertambah setelah diterima |

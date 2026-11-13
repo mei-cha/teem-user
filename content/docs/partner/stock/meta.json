@@ -1,0 +1,9 @@
+{
+  "title": "Stok",
+  "icon": "Package",
+  "pages": [
+    "partner-stock",
+    "stock-purchase",
+    "my-purchases"
+  ]
+}
