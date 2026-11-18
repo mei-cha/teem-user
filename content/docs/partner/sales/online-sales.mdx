@@ -1,5 +1,5 @@
 ---
-title: Penjualan Online
+title: Penjualan
 icon: ShoppingBag
 ---
 
@@ -27,7 +27,7 @@ Pada daftar utama penjualan, mitra dapat melihat ringkasan informasi transaksi s
 | **Pengiriman** | Metode pengiriman (*Ambil Sendiri* atau *Diantar Kurir*) beserta jarak lokasi. |
 | **Total** | Total nominal transaksi dan jumlah barang. |
 | **Status** | Label indikator status pesanan saat ini. |
-| **Aksi** | Tombol navigasi/tindakan cepat sesuai status transaksi. |
+| **Aksi** | Tombol navigasi/tindakan cepat sesuai status transaksi. Untuk pesanan belum lunas, pesanan tidak dapat diterima dan sistem menampilkan peringatan. |
 | **Waktu Pesanan** | Catatan relatif tanggal dan waktu transaksi dibuat. |
 
 ---
@@ -37,13 +37,17 @@ Pada daftar utama penjualan, mitra dapat melihat ringkasan informasi transaksi s
 Ikuti alur berikut untuk memproses pesanan online yang masuk:
 
 1. **Cek Pesanan Baru**: Pesanan baru muncul pada tabel dengan status **Menunggu Persetujuan Mitra**.
-2. **Terima atau Tolak**: Klik tombol pada kolom **Aksi** (atau buka detail pesanan) untuk **Terima Pesanan** atau **Tolak Pesanan** (wajib mengisi alasan penolakan).
+2. **Terima atau Tolak**: Klik tombol pada kolom **Aksi** (atau buka detail pesanan) untuk **Terima Pesanan** atau **Tolak Pesanan** (wajib mengisi alasan penolakan). Pesanan yang **belum lunas** tidak dapat diterima (lihat catatan di bawah).
 3. **Siapkan Produk**: Setelah diterima, status menjadi **Diproses**. Siapkan dan kemas produk sesuai pesanan.
 4. **Lanjutkan Sesuai Metode Pengiriman**:
    * **Diantar Kurir**: Cetak resi, tempelkan pada paket, serahkan ke kurir, lalu tekan **[Kirim]**.
    * **Ambil Sendiri**: Tekan **[Siap Diambil]** dan tunggu pembeli datang ke toko.
 5. **Selesai**: Pesanan berstatus **Selesai** setelah pembeli mengonfirmasi penerimaan barang.
 
+> **Pesanan Belum Lunas**
+> Pesanan dengan status pembayaran **Belum Lunas** tidak dapat diterima oleh Mitra. Jika Mitra mencoba menerima pesanan tersebut, sistem akan menampilkan **peringatan** bahwa pesanan belum dapat diproses sampai pembayaran pembeli lunas. Mitra baru dapat menerima pesanan setelah status pembayaran berubah menjadi **Lunas**.
+
+{/* TODO: konfirmasi teks peringatan yang tampil di sistem dan apakah opsi Tolak Pesanan tetap tersedia */}
 
 > Panduan rinci tiap metode pengiriman tersedia pada halaman **Penjualan Dikirim Kurir** dan **Penjualan Diambil Sendiri**.
 
@@ -83,7 +87,7 @@ Halaman ini menyajikan rincian lengkap mengenai transaksi, meliputi:
 * **Status & Riwayat Pesanan**: Status terkini beserta alur pemrosesan transaksi.
 * **Rincian Produk**: Daftar barang yang dibeli, harga satuan, serta total belanja.
 * **Informasi Pembeli & Pengiriman**: Alamat pengiriman pembeli, nomor kontak, serta metode pengiriman yang dipilih. Untuk pesanan **Ambil Sendiri**, ditampilkan lokasi pengambilan di toko Mitra.
-* **Rincian Pembayaran**: Metode pembayaran yang digunakan (misal: *Saldo Aplikasi*) beserta status kelunasannya.
+* **Rincian Pembayaran**: Metode pembayaran yang digunakan (misal: *Saldo Aplikasi*) beserta status kelunasannya. Jika status masih **Belum Lunas**, tombol **Terima Pesanan** tidak dapat digunakan dan sistem akan menampilkan peringatan.
 * **Tracking & Cetak Resi**: Tersedia untuk pesanan yang dikirim via kurir.
 * **Cetak Struk**: Tombol khusus untuk membuka tampilan cetak bukti transaksi.
 

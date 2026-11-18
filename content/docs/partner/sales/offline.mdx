@@ -13,58 +13,67 @@ Halaman **Penjualan Offline** digunakan untuk mencatat seluruh transaksi penjual
 
 ---
 
-## 1. Memilih Kategori Penjualan
+## 1. Tampilan Halaman Penjualan Offline
 
-Saat membuka halaman **Penjualan Offline**, Anda diminta memilih **kategori penjualan** terlebih dahulu. Setiap kategori memiliki data pembeli yang wajib diisi dan batas jumlah pembelian yang berbeda.
+Saat membuka halaman **Penjualan Offline**, Anda langsung melihat daftar produk di sisi kiri, serta panel **Kategori penjualan** dan **Struk Pembelian** di sisi kanan.
 
-![Pilih Kategori Penjualan Offline](/image/offline-kategori.png)
+![Halaman Penjualan Offline](/image/offline-main.png)
+
+* **Kolom Pencarian & Filter**: Cari produk melalui kolom **Cari produk...** atau tombol **[Filter]**.
+* **Daftar Produk**: Setiap produk menampilkan gambar, nama, harga, dan sisa stok, serta pilihan satuan (**Slop**, **Bal**, atau **Karton**).
+* **Kategori Penjualan**: Dipilih melalui *radio button* (**Reguler**, **Reseller**, atau **Khusus**). Secara bawaan, kategori **Reguler** sudah terpilih.
+* **Struk Pembelian**: Menampilkan produk yang dipilih, form data pembeli, total, dan tombol **[Update Stok]**.
+* **Riwayat Transaksi**: Tombol di sudut kanan atas untuk melihat riwayat transaksi (lihat bagian 4).
+
+---
+
+## 2. Memilih Kategori Penjualan
+
+Pilih **kategori penjualan** pada panel **Kategori penjualan** dengan menekan salah satu *radio button*. Keterangan kategori, data wajib, dan batas pembelian akan tampil di bawah pilihan. Setiap kategori memiliki data pembeli yang wajib diisi dan batas jumlah pembelian yang berbeda.
 
 | Kategori | Untuk Siapa | Data Wajib | Batas per Produk |
 | :--- | :--- | :--- | :--- |
-| **Penjualan Reguler** | Individu/pihak yang membeli untuk digunakan secara pribadi dan tidak dijual kembali | Nama pembeli | Maks. **2 Slop** |
-| **Penjualan Reseller** | Individu/pihak yang membeli untuk dijual kembali | Nama pembeli, No. telepon, Alamat pembeli | Maks. **7 Slop** |
-| **Penjualan Khusus** | Individu/pihak dengan kebutuhan khusus/insidental (event, acara, kegiatan tertentu, atau kebutuhan khusus lainnya) | Nama pembeli, No. telepon, Tujuan | Maks. **20 Slop** |
+| **Reguler** | Individu/pihak yang membeli untuk digunakan secara pribadi dan tidak dijual kembali | Nama pembeli | Maks. **2 Slop** |
+| **Reseller** | Individu/pihak yang membeli untuk dijual kembali | Nama pembeli, No. telepon, Alamat pembeli | Maks. **7 Slop** |
+| **Khusus** | Individu/pihak dengan kebutuhan khusus/insidental (event, acara, kegiatan tertentu, atau kebutuhan khusus lainnya) | Nama pembeli, No. telepon, Tujuan | Maks. **20 Slop** |
 
-Setelah kategori dipilih, nama kategori tampil di bagian atas halaman. Klik **[Ganti]** apabila Anda ingin memilih kategori lain.
+> **Catatan:** Daftar kategori, data wajib, dan batas pembelian pada tabel di atas dapat **berubah sewaktu-waktu** mengikuti pengaturan perusahaan. Selalu perhatikan keterangan yang tampil di bawah pilihan kategori pada sistem.
+
+> Form data pembeli akan menyesuaikan kategori yang dipilih. Pastikan kategori sudah benar sebelum menambahkan produk ke struk.
 
 ---
 
-## 2. Langkah-Langkah Pencatatan Penjualan Offline
+## 3. Langkah-Langkah Pencatatan Penjualan Offline
 
 Untuk mencatat transaksi penjualan fisik baru, ikuti tahapan berikut:
 
-1. **Pilih Kategori**: Pilih salah satu kategori penjualan (lihat bagian 1).
-2. **Pilih Produk**: Cari produk melalui kolom pencarian atau tombol **[Filter]**, lalu tentukan satuan (**Slop**, **Bal**, atau **Karton**) dan jumlah yang dibeli pelanggan. Produk yang dipilih akan masuk ke panel **Struk Pembelian**. Jumlah pembelian tidak boleh melebihi **batas kategori** yang tertera di bawah form data pembeli.
-3. **Isi Data Pembeli**: Lengkapi kolom pada bagian **Data pembeli** sesuai kategori. Kolom bertanda **\*** wajib diisi.
-4. **Update Stok & Simpan**: Klik tombol **[Update Stok]** untuk memproses pengurangan stok otomatis dan menyimpan catatan transaksi.
+1. **Pilih Kategori**: Tekan salah satu *radio button* **Reguler**, **Reseller**, atau **Khusus** (lihat bagian 2).
+2. **Pilih Produk**: Cari produk melalui kolom pencarian atau tombol **[Filter]**, lalu tentukan satuan (**Slop**, **Bal**, atau **Karton**) dan jumlah yang dibeli pelanggan. Produk yang dipilih akan masuk ke panel **Struk Pembelian**. Jumlah pembelian tidak boleh melebihi **batas kategori** yang tertera pada panel kategori.
+3. **Isi Data Pembeli**: Lengkapi kolom pada bagian data pembeli sesuai kategori. Kolom bertanda **\*** wajib diisi.
+4. **Klik Update Stok**: Klik tombol **[Update Stok]**. Sistem akan menampilkan *pop-up* **Konfirmasi Penjualan Offline** sebelum transaksi diproses.
+5. **Konfirmasi Pembayaran**: Pada *pop-up* konfirmasi, sistem meminta Anda memastikan pembayaran dari pembeli sesuai total transaksi telah diterima (contoh: *"Pastikan pembayaran sebesar Rp 300.000 telah diterima sebelum menyelesaikan transaksi."*). Tersedia dua opsi:
+   * **[Ya]**: Melanjutkan proses. Stok berkurang otomatis dan catatan transaksi disimpan.
+   * **[Batal]**: Menutup *pop-up* dan kembali ke halaman penjualan tanpa menyimpan transaksi.
 
-### Form Penjualan Reguler
+<div style={{ display: 'flex', justifyContent: 'center' }}>
+  <img
+    src="/image/offline-noted.png"
+    alt="Notifikasi Penjualan Terkatat"
+    style={{ maxWidth: '100%', height: 'auto' }}
+  />
+</div>
 
-Nama pembeli wajib diisi. **No. telepon** dan **Alamat pembeli** bersifat **opsional**.
+### Data Pembeli per Kategori
 
-![Form Penjualan Reguler](/image/offline-reguler.png)
+* **Reguler**: **Nama pembeli** wajib diisi. **No. telepon** dan **Alamat pembeli** bersifat **opsional**.
+* **Reseller**: **Nama pembeli**, **No. telepon**, dan **Alamat pembeli** wajib diisi.
+* **Khusus**: **Nama pembeli**, **No. telepon**, dan **Tujuan** wajib diisi. Isi **Tujuan** dengan keperluan pembelian (misalnya nama event atau kegiatan).
 
-### Form Penjualan Reseller
-
-**Nama pembeli**, **No. telepon**, dan **Alamat pembeli** wajib diisi.
-
-![Form Penjualan Reseller](/image/offline-reseller.png)
-
-### Form Penjualan Khusus
-
-**Nama pembeli**, **No. telepon**, dan **Tujuan** wajib diisi. Isi **Tujuan** dengan keperluan pembelian (misalnya nama event atau kegiatan).
-
-![Form Penjualan Khusus](/image/offline-khusus.png)
-
-5. **Konfirmasi & Berhasil**: Setelah transaksi disimpan, akan muncul *pop-up* **Penjualan Terkatat** yang menandakan transaksi berhasil. Pada jendela ini tersedia dua opsi:
-   * **[Selesai]**: Menutup jendela konfirmasi dan kembali ke menu awal.
-   * **[Cetak Struk]**: Mencetak bukti transaksi langsung.
-
-![Notifikasi Penjualan Terkatat](/image/offline-noted.png)
+> Kolom **wajib** dan **opsional** di atas dapat berubah sewaktu-waktu sesuai pengaturan perusahaan. Kolom bertanda **\*** pada form di sistem selalu menjadi acuan terbaru.
 
 ---
 
-## 3. Riwayat Penjualan Offline
+## 4. Riwayat Penjualan Offline
 
 Anda dapat mengakses dan meninjau seluruh catatan transaksi terdahulu dengan menekan tombol **[Riwayat Transaksi]** yang berada di sudut kanan atas halaman.
 
