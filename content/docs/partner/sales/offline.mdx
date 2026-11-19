@@ -15,14 +15,14 @@ Halaman **Penjualan Offline** digunakan untuk mencatat seluruh transaksi penjual
 
 ## 1. Tampilan Halaman Penjualan Offline
 
-Saat membuka halaman **Penjualan Offline**, Anda langsung melihat daftar produk di sisi kiri, serta panel **Kategori penjualan** dan **Struk Pembelian** di sisi kanan.
+Saat membuka halaman **Penjualan Offline**, Anda langsung melihat daftar produk di sisi kiri, serta panel **Kategori penjualan** dan **Keranjang Belanja** di sisi kanan.
 
 ![Halaman Penjualan Offline](/image/offline-main.png)
 
 * **Kolom Pencarian & Filter**: Cari produk melalui kolom **Cari produk...** atau tombol **[Filter]**.
-* **Daftar Produk**: Setiap produk menampilkan gambar, nama, harga, dan sisa stok, serta pilihan satuan (**Slop**, **Bal**, atau **Karton**).
+* **Daftar Produk**: Setiap produk menampilkan gambar, nama, harga, dan sisa stok, serta pilihan satuan (**Slop**, **Bal**, atau **Karton**). Pada setiap produk terdapat ikon **keranjang** untuk menambahkan produk ke keranjang. Produk yang sudah masuk keranjang ditandai dengan **angka merah** di sudut kartu yang menunjukkan **jumlah (kuantitas)** produk tersebut di dalam keranjang.
 * **Kategori Penjualan**: Dipilih melalui *radio button* (**Reguler**, **Reseller**, atau **Khusus**). Secara bawaan, kategori **Reguler** sudah terpilih.
-* **Struk Pembelian**: Menampilkan produk yang dipilih, form data pembeli, total, dan tombol **[Update Stok]**.
+* **Keranjang Belanja**: Menampilkan produk yang dipilih, form data pembeli, total, dan tombol **[Update Stok]**.
 * **Riwayat Transaksi**: Tombol di sudut kanan atas untuk melihat riwayat transaksi (lihat bagian 4).
 
 ---
@@ -39,7 +39,7 @@ Pilih **kategori penjualan** pada panel **Kategori penjualan** dengan menekan sa
 
 > **Catatan:** Daftar kategori, data wajib, dan batas pembelian pada tabel di atas dapat **berubah sewaktu-waktu** mengikuti pengaturan perusahaan. Selalu perhatikan keterangan yang tampil di bawah pilihan kategori pada sistem.
 
-> Form data pembeli akan menyesuaikan kategori yang dipilih. Pastikan kategori sudah benar sebelum menambahkan produk ke struk.
+> Form data pembeli akan menyesuaikan kategori yang dipilih. Pastikan kategori sudah benar sebelum menambahkan produk ke keranjang.
 
 ---
 
@@ -48,7 +48,11 @@ Pilih **kategori penjualan** pada panel **Kategori penjualan** dengan menekan sa
 Untuk mencatat transaksi penjualan fisik baru, ikuti tahapan berikut:
 
 1. **Pilih Kategori**: Tekan salah satu *radio button* **Reguler**, **Reseller**, atau **Khusus** (lihat bagian 2).
-2. **Pilih Produk**: Cari produk melalui kolom pencarian atau tombol **[Filter]**, lalu tentukan satuan (**Slop**, **Bal**, atau **Karton**) dan jumlah yang dibeli pelanggan. Produk yang dipilih akan masuk ke panel **Struk Pembelian**. Jumlah pembelian tidak boleh melebihi **batas kategori** yang tertera pada panel kategori.
+2. **Pilih Produk**: Cari produk melalui kolom pencarian atau tombol **[Filter]**, lalu tentukan satuan (**Slop**, **Bal**, atau **Karton**). Tambahkan produk ke keranjang dengan salah satu cara berikut:
+   * Tekan ikon **keranjang** pada kartu produk, atau
+   * Tekan **kartu produknya** secara langsung.
+
+   Produk yang dipilih akan masuk ke panel **Keranjang Belanja**, dan kartu produknya menampilkan angka merah sebagai penanda jumlah produk tersebut di keranjang. Di panel tersebut, atur jumlah menggunakan tombol **−** dan **+**, hapus satu produk dengan ikon **X**, atau tekan **Reset** untuk mengosongkan keranjang. Jumlah pembelian tidak boleh melebihi **batas kategori** yang tertera pada panel kategori.
 3. **Isi Data Pembeli**: Lengkapi kolom pada bagian data pembeli sesuai kategori. Kolom bertanda **\*** wajib diisi.
 4. **Klik Update Stok**: Klik tombol **[Update Stok]**. Sistem akan menampilkan *pop-up* **Konfirmasi Penjualan Offline** sebelum transaksi diproses.
 5. **Konfirmasi Pembayaran**: Pada *pop-up* konfirmasi, sistem meminta Anda memastikan pembayaran dari pembeli sesuai total transaksi telah diterima (contoh: *"Pastikan pembayaran sebesar Rp 300.000 telah diterima sebelum menyelesaikan transaksi."*). Tersedia dua opsi:
